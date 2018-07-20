@@ -30,7 +30,7 @@ else
     echo "Copying specified files to tensorflow directory..."
     for arg in "$@"
     do
-        if [ -f "$arg" ]; then
+        if [ -f "$arg" ] || [ -d "$arg" ]; then
             # file exists
             tar -cv "$arg" | docker exec -i "$IMGHASH" tar x -C .
             # SOURCE: https://stackoverflow.com/a/28123384
