@@ -1,3 +1,4 @@
+import tensorflow as tf
 from model_converters import KerasToTensorflow
 from onnx_tf.frontend import tensorflow_graph_to_onnx_model
 
