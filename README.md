@@ -31,7 +31,25 @@ Alternatively, you can find the URL with the required token using the
 ### run.ipynb
 
 Open the file `src/run.ipynb`. Click the `Run` command in the toolbar above the
-first cell.
+first cell to run the active cell.
+
+## Findings
+
+### Training, saving and loading models with TensorFlow
+
+We've found that training a model in TensorFlow and saving the output to a H5 file
+using Keras is exceedingly simple. Loading the model in another TensorFlow file
+is also very simple, but it does not seem to be possible to save the compiled
+optimization options along with the model. Thus, the model needs to be
+recompiled upon load.
+
+### Exporting pre-trained binaries to other formats
+
+TODO: Attempt to export to ONNX format using a conversion tool
+
+### Using ONNX models trained in TensorFlow with other frameworks
+
+TODO
 
 ## TODO
 
