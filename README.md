@@ -45,10 +45,49 @@ recompiled upon load.
 
 ### Exporting pre-trained binaries to other formats
 
-TODO: Attempt to export to ONNX format using a conversion tool
+#### Conversion tools
+
 - https://github.com/triagemd/model-converters (convert keras to tensorflow)
 - https://github.com/onnx/onnx-tensorflow (convert tensorflow to onnx
   (**EXPERIMENTAL**))
+- https://github.com/onnx/tensorflow-onnx (convert tensorflow to onnx
+  (**EXPERIMENTAL**))
+
+#### Limitations
+
+The Keras to TensorFlow conversion tool (API version) requires that the second
+argument is a directory name, and does not allow for specifying the name of the
+saved model output file.
+
+#### Difficulties
+
+We found that I could not read from a saved model directly into the TensorFlow to
+ONNX converter - this resulted in an `error parsing message` when calling
+`graph_def.ParseFromString`. To work around this, we created a SavedModel from
+the file instead, and parsed that from the string.
+
+The next problem faced was that the tutorial for using the tf to onnx conversion
+tool assumed the frozen model was created by a tool in which we explicitly
+define the output; however, this is not the case when creating a saved model
+using the Keras conversion tool. The tool also requires the user to specify the
+name of the output node. This was found by printing the SavedModel and searching
+for the string "output" - at the end of the model, the names of output and input
+nodes were specified, and the name of the output node was "dense\_1/Softmax".
+
+Following this, it was discovered that the conversion tool does not support
+PlaceholderWithDefault nodes. This is apparently not a limitation within the
+ONNX format (ref: https://github.com/onnx/tensorflow-onnx/pull/53/commits), but
+a limitation in the conversion tool. There might be a workaround, but we
+currently have no solution to this problem.
+
+It's possible that it would be better to look into another tf to onnx converter,
+[tf2onnx](https://github.com/onnx/tensorflow-onnx), which allegedly has support
+for PlaceholderWithDefault operators, but that one does not have an easy install
+option. It may also be a good idea to look into other potential converters such
+as ones able to convert the format from HDF5 to ONNX, or trying to convert to
+low-level TensorFlow compatible format from Keras using a different path
+(possibly one integrated with TensorFlow, since TensorFlow has built-in Keras
+support) and take it to ONNX from there.
 
 ### Using ONNX models trained in TensorFlow with other frameworks
 
