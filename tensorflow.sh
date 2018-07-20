@@ -21,6 +21,12 @@ IMGHASH="$(docker ps | grep tensorflow/tensorflow | sed -n 's/\(............\).*
 echo "Docker container with hash $IMGHASH started"
 echo "" # newline
 
+# install additional modules
+echo "Installing additional modules..."
+docker exec -ti "$IMGHASH" pip install -U model_converters
+docker exec -ti "$IMGHASH" pip install -U onnx-tf
+echo "" # newline
+
 if [[ $# < 1 ]]; then
     # default: copy all files in the folder
     echo "Copying all files to tensorflow directory..."
@@ -57,5 +63,6 @@ sleep 1 && echo -n "URL: " && docker logs "$IMGHASH" 2>&1 | grep "http://$IMGHAS
 # Create a "kill" script for easily killing the container
 echo "docker kill $IMGHASH && rm \$0" > kill-tensorflow.sh && chmod +x kill-tensorflow.sh
 echo "Run ./kill-tensorflow.sh to kill the docker container"
+
 
 wait # wait for background process (printing URL with token) to finish
