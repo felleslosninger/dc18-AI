@@ -5,13 +5,13 @@
 On a \*nix computer (or Windows using git-bash), run the following command:
 
 ```
-$ ./tensorflow.sh
+$ ./tensorflow.sh src/*
 ```
 
 This kills the previous "tensorflow/tensorflow" container, if one exists, and
 runs a new container. It also copies the files specified as arguments into the
 container, or, if no files were specified, it copies all the files in the
-current directory.
+current directory. (NOTE: does not copy folders.)
 
 The script will output a URL with a "token" parameter. Go to that URL. You will
 be brought to a Jupyter environment where the project files can be run.
