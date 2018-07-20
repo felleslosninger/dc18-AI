@@ -46,6 +46,9 @@ recompiled upon load.
 ### Exporting pre-trained binaries to other formats
 
 TODO: Attempt to export to ONNX format using a conversion tool
+- https://github.com/triagemd/model-converters (convert keras to tensorflow)
+- https://github.com/onnx/onnx-tensorflow (convert tensorflow to onnx
+  (**EXPERIMENTAL**))
 
 ### Using ONNX models trained in TensorFlow with other frameworks
 
