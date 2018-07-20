@@ -37,7 +37,7 @@ first cell.
 
 - [x] Create a TensorFlow program that successfully trains a model to classify
   images
-- [ ] Save the model to a file
-- [ ] Load the model into TensorFlow (for demonstration purposes)
+- [x] Save the model to a file
+- [x] Load the model into TensorFlow (for demonstration purposes)
 - [ ] Convert the model to ONNX format
 - [ ] Load the model in a machine learning framework supporting ONNX files
