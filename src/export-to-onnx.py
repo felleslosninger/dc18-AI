@@ -6,11 +6,11 @@ from onnx_tf.frontend import tensorflow_graph_to_onnx_model
 KerasToTensorflow.convert("model.h5", "export")
 
 # convert Tensorflow frozen .pb format to ONNX format
-with tf.gfile.GFile("export/model.pb", "rb") as f:
+with tf.gfile.GFile("export/saved_model.pb", "rb") as f:
     graph_def = tf.GraphDef()
     graph_def.ParseFromString(f.read())
     onnx_model = tensorflow_graph_to_onnx_model(graph_def,
-                                     "fc2/add",
+                                     "dense_1/Softmax",
                                      opset=6)
 
     file = open("export/model.onnx", "wb")
