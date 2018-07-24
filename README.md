@@ -43,6 +43,10 @@ is also very simple, but it does not seem to be possible to save the compiled
 optimization options along with the model. Thus, the model needs to be
 recompiled upon load.
 
+Using TensorFlow's more low-level API is also achievable, but more cumbersome.
+However, this allows you more control over the model you create, which is an
+advantage during the exporting step.
+
 ### Exporting pre-trained binaries to other formats
 
 #### Conversion tools
@@ -80,14 +84,25 @@ ONNX format (ref: https://github.com/onnx/tensorflow-onnx/pull/53/commits), but
 a limitation in the conversion tool. There might be a workaround, but we
 currently have no solution to this problem.
 
-It's possible that it would be better to look into another tf to onnx converter,
-[tf2onnx](https://github.com/onnx/tensorflow-onnx), which allegedly has support
-for PlaceholderWithDefault operators, but that one does not have an easy install
-option. It may also be a good idea to look into other potential converters such
-as ones able to convert the format from HDF5 to ONNX, or trying to convert to
-low-level TensorFlow compatible format from Keras using a different path
-(possibly one integrated with TensorFlow, since TensorFlow has built-in Keras
-support) and take it to ONNX from there.
+Attempting to use another TensorFlow to ONNX converter,
+[tf2onnx](https://github.com/onnx/tensorflow-onnx), seems like another dead end
+with this approach, as there is some other error in the saved model that it
+balks at. It seems clear at this point that the added level of indirection when
+using Keras is making the exporter  virtually impossible to use.
+
+#### Working solution
+
+**Files:**
+- src/save-training-data-tf.py
+- src/iris\_data.py
+- src/export-to-pb.py
+- src/export-to-onnx.py
+
+We created another file which constructed its model based solely on the
+TensorFlow lower level API. Saving this produced a .ckpt (chekcpoint) file,
+which could be saved as a .pb (frozen graph definition) file with relative ease.
+It was possible to parse the natively named .pb file (using a known output node
+name) with the onnx/onnx-tensorflow conversion tool.
 
 ### Using ONNX models trained in TensorFlow with other frameworks
 
@@ -99,5 +114,5 @@ TODO
   images
 - [x] Save the model to a file
 - [x] Load the model into TensorFlow (for demonstration purposes)
-- [ ] Convert the model to ONNX format
+- [x] Convert the model to ONNX format
 - [ ] Load the model in a machine learning framework supporting ONNX files
