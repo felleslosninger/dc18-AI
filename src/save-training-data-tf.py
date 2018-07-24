@@ -9,9 +9,9 @@ import iris_data
 
 import os
 
-LEARNING_RATE = 0.0001
+LEARNING_RATE = 0.01
 SAVE_PATH = "models"
-EPOCHS = 10000
+EPOCHS = 1000
 
 # create models
 if not os.path.exists(SAVE_PATH):
