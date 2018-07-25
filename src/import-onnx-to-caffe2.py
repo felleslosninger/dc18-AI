@@ -6,6 +6,6 @@ import numpy as np
 img = np.random.randn(1, 3, 224, 224).astype(np.float32)
 
 # Load the ONNX model
-model = onnx.load('assets/squeezenet.onnx')
+model = onnx.load('models/model.onnx')
 # Run the ONNX model with Caffe2
 outputs = caffe2.python.onnx.backend.run_model(model, [img])
