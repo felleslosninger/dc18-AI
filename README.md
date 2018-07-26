@@ -108,6 +108,11 @@ name) with the onnx/onnx-tensorflow conversion tool.
 
 TODO
 
+### Using ONNX models in Caffe2
+
+According to the [ONNX specifications](https://github.com/onnx/tutorials), Caffe2 should support exporting and importing ONNX files. We've been trying to make this work in practice, but it requires substantial configuration of an environment. We've been using various docker containers. The official Caffe2 containers are deprecated, and we could not make them work. 
+We've been working from a conda container where we installed Caffe2 packages. ONNX can be installed in conda, but it needs some packages to be installed in the OS. It needs a lua package called loadcaffe which converts caffe outputs to torch-compatible files. This means that torch needs to be installed in order to use ONNX and Caffe2. 
+
 ## TODO
 
 - [x] Create a TensorFlow program that successfully trains a model to classify
