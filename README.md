@@ -1,37 +1,50 @@
-# Experimental branch - save and export training data from TensorFlow to another framework
+# Experimental branch - Anaconda-based Docker machine learning environment
 
 ## Initializing the Docker image
 
 On a \*nix computer (or Windows using git-bash), run the following command:
 
 ```
-$ ./tensorflow.sh src
+$ ./start.sh
 ```
 
-This kills the previous "tensorflow/tensorflow" container, if one exists, and
-runs a new container. It also copies the files specified as arguments into the
-container, or, if no files were specified, it copies all the files in the
-current directory.
+This sets up a Docker image based on
+[continuumio/anaconda](https://hub.docker.com/r/continuumio/anaconda/) and runs
+all the required commands for this to work out of the box. See `start.sh`,
+`scripts/anaconda.sh` and `scripts/docker-hash.sh` to see how the code works.
 
-The script will output a URL with a "token" parameter. Go to that URL. You will
-be brought to a Jupyter environment where the project files can be run.
+Accepts optional command line argument `--restart` which kills the previous
+continuumio/anaconda image if one is running.
+
+The script will output a URL with a "token" parameter. Go to that URL to
+checkout the Jupyter notebook started by the server. From there, the project
+files can be run.
 
 ## Running the project
 
-First, ensure you have a working tensorflow/tensorflow Docker container. You 
-can run `docker ps`, or just run the `./tensorflow.sh` script - it doesn't
-matter if you've run it before, as the script automatically kills any
-tensorflow/tensorflow containers already running.
+### runAll.ipynb
 
-Next, go to the URL specified at the end of the ./tensorflow.sh script.
-Alternatively, you can find the URL with the required token using the
-`docker logs` command, but you need to replace the docker image hash with
-"localhost".
+This file contains six cells which demonstrates some of the approaches we have
+explored in attempting to convert TensorFlow models to ONNX. The first two save
+the model as a HDF5 model (Keras file format) and loads the same model to test
+that it works, respectively. Previous versions of `export-to-onnx.py` attempted
+to use [model\_converters](https://github.com/triagemd/model-converters) and
+[onnx-tf](https://github.com/onnx/onnx-tensorflow) to convert this to ONNX, but
+these efforts did not pan out.
 
-### run.ipynb
+The remaining four cells attempt to train a model using the low-level TensorFlow
+API, convert this to a protobuf format, and then convert this format using
+onnx-tf to ONNX format, and lastly to load the saved model into Microsoft CNTK,
+which supports integrated ONNX support.
 
-Open the file `src/run.ipynb`. Click the `Run` command in the toolbar above the
-first cell to run the active cell.
+### run.ipynb and run2.ipynb
+
+These represent old entry points to the scripts we've written.
+
+### New notebooks
+
+New notebooks can be created and either run existing Python code (using the
+`%run ...` command) in the `src/` folder, or may contain code directly.
 
 ## Findings
 
@@ -88,7 +101,7 @@ Attempting to use another TensorFlow to ONNX converter,
 [tf2onnx](https://github.com/onnx/tensorflow-onnx), seems like another dead end
 with this approach, as there is some other error in the saved model that it
 balks at. It seems clear at this point that the added level of indirection when
-using Keras is making the exporter  virtually impossible to use.
+using Keras is making the exporter virtually impossible to use.
 
 #### Working solution
 
@@ -104,20 +117,28 @@ which could be saved as a .pb (frozen graph definition) file with relative ease.
 It was possible to parse the natively named .pb file (using a known output node
 name) with the onnx/onnx-tensorflow conversion tool.
 
-### Using ONNX models trained in TensorFlow with other frameworks
+The problem with this approach is that currently we are unable to freeze the
+graph correctly. If this error is fixed, there may be additional problems down
+the line that we have not yet encountered.
 
-TODO
+### Using ONNX models trained in TensorFlow with CNTK
+
+We attempted to use Microsoft CNTK to load the exported ONNX model. This fails
+to work for two reasons:
+- First, freezing the graph using `export-to-pb.py` fails; it saves an empty
+  model. In theory, CNTK might be able to load that, but it turns out that
+  something in the model specifies a negative dimension, which is apparently
+  not supported by ONNX, which is what causes the error.
+- Secondly, we tried just loading a pre-trained ONNX model found online. This
+  also fails, and may be a recent issue discovered in CNTK, as documented by
+  [this GitHub issue](https://github.com/Microsoft/CNTK/issues/3310) on the
+  CNTK GitHub page - the error message seems to contain the same error as ours
+  does.
+  - Note: the model used by this file (`import-big-model-cntk.py`) is not
+    included in the repo due to its size, but can be downloaded from
+    [here](https://github.com/onnx/models/tree/master/bvlc_reference_caffenet).
 
 ### Using ONNX models in Caffe2
 
 According to the [ONNX specifications](https://github.com/onnx/tutorials), Caffe2 should support exporting and importing ONNX files. We've been trying to make this work in practice, but it requires substantial configuration of an environment. We've been using various docker containers. The official Caffe2 containers are deprecated, and we could not make them work. 
 We've been working from a conda container where we installed Caffe2 packages. ONNX can be installed in conda, but it needs some packages to be installed in the OS. It needs a lua package called loadcaffe which converts caffe outputs to torch-compatible files. This means that torch needs to be installed in order to use ONNX and Caffe2. 
-
-## TODO
-
-- [x] Create a TensorFlow program that successfully trains a model to classify
-  images
-- [x] Save the model to a file
-- [x] Load the model into TensorFlow (for demonstration purposes)
-- [x] Convert the model to ONNX format
-- [ ] Load the model in a machine learning framework supporting ONNX files
