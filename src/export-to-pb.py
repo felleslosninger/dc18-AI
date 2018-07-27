@@ -15,11 +15,15 @@ with tf.Session() as sess:
     saver.restore(sess,tf.train.latest_checkpoint('models'))
 
     # Freeze the graph
+    print("SESSION GRAPH DEF:")
     print(sess.graph_def)
+    
     frozen_graph_def = tf.graph_util.convert_variables_to_constants(
         sess,
         sess.graph_def,
         output_node_names)
+    
+    print("FROZEN GRAPH DEF:")
     print(frozen_graph_def)
 
     # Save the frozen graph
