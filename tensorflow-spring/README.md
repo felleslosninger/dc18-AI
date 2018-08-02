@@ -1,2 +1,0 @@
-# TensorflowTest
-Testing Tensorflow tutorials

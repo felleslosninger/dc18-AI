@@ -1,32 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="764eb934-ec21-4e7a-8743-4ae80b894d5e" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dc18-AI.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+    <list default="true" id="764eb934-ec21-4e7a-8743-4ae80b894d5e" name="Default" comment="Added the other projects to own branch to work on">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/other.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kill-tensorflow.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/checkpoint" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/model.ckpt.data-00000-of-00001" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/model.ckpt.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/model.ckpt.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/model.onnx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/.ipynb_checkpoints/run-checkpoint.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/export-to-onnx.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/export-to-pb.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/import-onnx-to-caffe2.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/iris_data.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/load-training-data.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/run.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/save-training-data-tf.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/save-training-data.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tensorflow.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/stillinger-nav/stillinger-nav.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/stillinger-nav/stillinger-nav.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tensorflow-spring/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tensorflow-spring/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tensorflow-spring/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tensorflow-spring/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tensorflow-spring/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tensorflow-spring/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tensorflow-spring/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tensorflow-spring/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tensorflow-spring/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tensorflow-spring/TensorflowTest.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tensorflow-spring/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tensorflow-spring/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tensorflow-spring/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tensorflow-spring/src/main/java/com/TensorflowTest/TensorflowTest/Random/HelloTF.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tensorflow-spring/src/main/java/com/TensorflowTest/TensorflowTest/Random/LabelImage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tensorflow-spring/src/main/java/com/TensorflowTest/TensorflowTest/SecurityConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tensorflow-spring/src/main/java/com/TensorflowTest/TensorflowTest/Serving/Iris.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tensorflow-spring/src/main/java/com/TensorflowTest/TensorflowTest/Serving/IrisClassifierService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tensorflow-spring/src/main/java/com/TensorflowTest/TensorflowTest/Serving/IrisController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tensorflow-spring/src/main/java/com/TensorflowTest/TensorflowTest/Serving/IrisTensorflowClassifierService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tensorflow-spring/src/main/java/com/TensorflowTest/TensorflowTest/TensorflowTestApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tensorflow-spring/src/main/java/com/TensorflowTest/TensorflowTest/Training/IrisTrainer.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tensorflow-spring/src/main/java/com/TensorflowTest/TensorflowTest/Training/TrainingNotebook.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tensorflow-spring/src/main/java/com/TensorflowTest/TensorflowTest/Training/stored_model/1532676921/saved_model.pbtxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tensorflow-spring/src/main/java/com/TensorflowTest/TensorflowTest/Training/stored_model/1532676921/variables/variables.data-00000-of-00001" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tensorflow-spring/src/main/java/com/TensorflowTest/TensorflowTest/Training/stored_model/1532676921/variables/variables.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tensorflow-spring/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tensorflow-spring/src/test/java/com/TensorflowTest/TensorflowTest/IrisControllerTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tensorflow-spring/src/test/java/com/TensorflowTest/TensorflowTest/TensorflowTestApplicationTests.java" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -35,19 +42,21 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/dc18_AI$dc18_AI.coverage" NAME="dc18-AI Coverage Results" MODIFIED="1533025840548" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/dc18_AI$dc18_AI.coverage" NAME="dc18-AI Coverage Results" MODIFIED="1533194806255" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="214453886">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="4" />
           <entry key="project.open.time.23" value="1" />
           <entry key="project.open.time.25" value="1" />
           <entry key="project.open.time.30" value="1" />
+          <entry key="project.open.time.32" value="1" />
           <entry key="project.open.time.35" value="2" />
+          <entry key="project.open.time.45" value="1" />
           <entry key="project.open.time.61" value="1" />
-          <entry key="project.opened" value="6" />
+          <entry key="project.opened" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -55,7 +64,7 @@
           <entry key="Bash" value="13" />
           <entry key="Cmd" value="1" />
           <entry key="IDEA_MODULE" value="1" />
-          <entry key="IPNB" value="14" />
+          <entry key="IPNB" value="15" />
           <entry key="JAVA" value="18" />
           <entry key="Markdown" value="4" />
           <entry key="PLAIN_TEXT" value="7" />
@@ -71,7 +80,7 @@
           <entry key="cmd" value="1" />
           <entry key="gitignore" value="4" />
           <entry key="iml" value="1" />
-          <entry key="ipynb" value="14" />
+          <entry key="ipynb" value="15" />
           <entry key="java" value="18" />
           <entry key="md" value="4" />
           <entry key="mvnw" value="1" />
@@ -97,18 +106,17 @@
       <usages-collector id="statistics.php.composer.command.options" />
       <usages-collector id="statistics.php.new.test" />
       <usages-collector id="statistics.php.new.class" />
+      <usages-collector id="statistics.spring.boot.mvc.usages" />
+      <usages-collector id="statistics.spring.boot.run.usages" />
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tensorflow-export-test/src/export-to-onnx.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="23" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
-              <folding>
-                <element signature="e#0#23#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="34">
+              <caret line="2" column="8" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -131,13 +139,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tensorflow-export-test/src/import-onnx-to-caffe2.py">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <folding>
-                <element signature="e#0#33#0" expanded="true" />
-              </folding>
+              <caret column="10" selection-start-column="10" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -145,10 +151,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/master/src/import-onnx-to-caffe2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <element signature="e#0#33#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="51">
+              <caret line="3" column="10" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -168,11 +172,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/master/src/save-training-data-tf.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="867">
-              <caret line="51" selection-start-line="51" selection-end-line="51" />
-              <folding>
-                <element signature="e#268#277#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="85">
+              <caret line="5" selection-start-line="5" selection-end-line="5" />
             </state>
           </provider>
         </entry>
@@ -193,7 +194,7 @@
         <entry file="file://$PROJECT_DIR$/master/src/pytorch-load.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="102">
-              <caret line="6" column="9" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
+              <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -201,11 +202,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/anaconda-env/src/pytorch-load.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="29" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
-              <folding>
-                <element signature="e#83#130#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="102">
+              <caret line="6" column="29" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -213,8 +211,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/master/src/import-onnx-to-cntk.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="67" selection-start-line="2" selection-start-column="67" selection-end-line="2" selection-end-column="67" />
+            <state>
+              <caret column="8" selection-start-column="8" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -263,7 +261,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/save-training-data.py" />
         <option value="$PROJECT_DIR$/src/load-training-data.py" />
         <option value="$PROJECT_DIR$/src/iris_data.py" />
         <option value="$PROJECT_DIR$/src/save-training-data-tf.py" />
@@ -314,6 +311,7 @@
         <option value="$PROJECT_DIR$/master/src/export-to-onnx.py" />
         <option value="$PROJECT_DIR$/anaconda-env/src/export-to-onnx.py" />
         <option value="$PROJECT_DIR$/master/src/import-onnx-to-cntk.py" />
+        <option value="$PROJECT_DIR$/prez/stillinger-nav.ipynb" />
       </list>
     </option>
   </component>
@@ -328,10 +326,9 @@
     <servers />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1176" />
+    <option name="x" value="953" />
+    <option name="width" value="974" />
+    <option name="height" value="1167" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
@@ -342,6 +339,7 @@
     </navigator>
     <panes>
       <pane id="AndroidView" />
+      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -365,15 +363,14 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Course" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1533041023297" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../pytorch/scripts/build_windows.bat" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1533041323002" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../dc18-TokenExchange" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -469,18 +466,27 @@
       <workItem from="1532930889420" duration="75000" />
       <workItem from="1532931038674" duration="970000" />
       <workItem from="1532936049130" duration="2050000" />
-      <workItem from="1533022698571" duration="5034000" />
+      <workItem from="1533022698571" duration="5638000" />
+      <workItem from="1533104359925" duration="1972000" />
+      <workItem from="1533190559989" duration="2167000" />
     </task>
+    <task id="LOCAL-00001" summary="Added the other projects to own branch to work on">
+      <created>1533041294644</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1533041294644</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19059000" />
+    <option name="totallyTimeSpent" value="23802000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18336888" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18763326" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -489,7 +495,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49733475" visible="true" weight="0.32629558" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4968017" weight="0.32629558" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -498,14 +504,14 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Docker" order="10" />
-      <window_info active="true" anchor="bottom" id="Event Log" order="11" sideWeight="0.5026652" side_tool="true" visible="true" weight="0.32629558" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50319827" side_tool="true" visible="true" weight="0.32629558" />
       <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="right" x="0" y="0" width="434" height="976" id="Documentation" order="5" side_tool="true" weight="0.32822758" />
+      <window_info anchor="right" x="0" y="0" width="434" height="976" id="Documentation" order="5" side_tool="true" weight="0.32782516" />
       <window_info anchor="right" id="Maven Projects" order="6" />
       <window_info anchor="right" id="SciView" order="7" />
       <window_info anchor="right" id="Database" order="8" />
@@ -516,17 +522,21 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="UpdateCopyrightCheckinHandler">
+    <option name="UPDATE_COPYRIGHT" value="true" />
+  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
+    <MESSAGE value="Added the other projects to own branch to work on" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added the other projects to own branch to work on" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/anaconda-env/models/checkpoint">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/anaconda-env/scripts/docker-hash.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -600,13 +610,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tensorflow-spring/src/main/java/com/TensorflowTest/TensorflowTest/Training/IrisTrainer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/tensorflow-spring/src/main/java/com/TensorflowTest/TensorflowTest/Serving/IrisTensorflowClassifierService.java">
       <provider selected="true" editor-type-id="text-editor" />
@@ -627,25 +631,13 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/tensorflow-export-test/src/export-to-pb.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/tensorflow-export-test/src/save-training-data-tf.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/tensorflow-export-test/src/save-training-data.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/tensorflow-export-test/src/run.ipynb">
       <provider selected="true" editor-type-id="ipnb-editor">
@@ -655,30 +647,15 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tensorflow-export-test/src/load-training-data.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/tensorflow-export-test/src/iris_data.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/master/src/save-training-data.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" selection-start-line="4" selection-end-line="4" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -704,31 +681,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/master/src/load-training-data.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/master/src/iris_data.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/master/src/export-to-pb.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/master/src/.ipynb_checkpoints/run-checkpoint.ipynb">
       <provider selected="true" editor-type-id="ipnb-editor">
@@ -741,9 +700,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="21" column="27" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -751,28 +707,102 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1292">
           <caret line="76" column="62" selection-start-line="76" selection-start-column="62" selection-end-line="76" selection-end-column="62" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/anaconda-env/src/load-training-data.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/anaconda-env/src/save-training-data.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="595">
           <caret line="35" selection-start-line="35" selection-end-line="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/master/src/import-onnx-to-caffe2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="10" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/anaconda-env/src/import-onnx-to-caffe2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="56" selection-start-line="5" selection-start-column="56" selection-end-line="5" selection-end-column="56" />
           <folding>
-            <element signature="e#0#23#0" expanded="true" />
+            <element signature="e#0#33#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prez/stillinger-nav.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/anaconda-env/src/pytorch-load.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="29" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/master/src/import-onnx-to-cntk.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="8" selection-start-column="8" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/anaconda-env/src/import-onnx-to-cntk.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="67" selection-start-line="2" selection-start-column="67" selection-end-line="2" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/master/src/import-big-model-cntk.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/anaconda-env/src/import-big-model-cntk.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/master/src/save-training-data-tf.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/anaconda-env/src/save-training-data-tf.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="799">
+          <caret line="47" column="39" selection-start-line="47" selection-start-column="39" selection-end-line="47" selection-end-column="39" />
+          <folding>
+            <element signature="e#268#277#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/master/src/pytorch-load.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tensorflow-export-test/src/export-to-onnx.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="8" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
         </state>
       </provider>
     </entry>
@@ -793,99 +823,7 @@
     <entry file="file://$PROJECT_DIR$/tensorflow-export-test/src/import-onnx-to-caffe2.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <folding>
-            <element signature="e#0#33#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/master/src/import-onnx-to-caffe2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#33#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/anaconda-env/src/import-onnx-to-caffe2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="56" selection-start-line="5" selection-start-column="56" selection-end-line="5" selection-end-column="56" />
-          <folding>
-            <element signature="e#0#33#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/master/src/save-training-data-tf.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="867">
-          <caret line="51" selection-start-line="51" selection-end-line="51" />
-          <folding>
-            <element signature="e#268#277#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/anaconda-env/src/save-training-data-tf.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="799">
-          <caret line="47" column="39" selection-start-line="47" selection-start-column="39" selection-end-line="47" selection-end-column="39" />
-          <folding>
-            <element signature="e#268#277#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/master/src/pytorch-load.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="9" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/master/src/import-big-model-cntk.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/anaconda-env/src/import-big-model-cntk.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/anaconda-env/src/pytorch-load.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="29" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
-          <folding>
-            <element signature="e#83#130#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/master/src/import-onnx-to-cntk.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="67" selection-start-line="2" selection-start-column="67" selection-end-line="2" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/anaconda-env/src/import-onnx-to-cntk.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="67" selection-start-line="2" selection-start-column="67" selection-end-line="2" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tensorflow-export-test/src/export-to-onnx.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="23" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
+          <caret column="10" selection-start-column="10" selection-end-column="10" />
         </state>
       </provider>
     </entry>
