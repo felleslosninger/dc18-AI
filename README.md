@@ -1,4 +1,4 @@
-# Experimental branch - Anaconda-based Docker machine learning environment
+# Anaconda-based Docker image for machine learning experimentation
 
 ## Initializing the Docker image
 
@@ -22,24 +22,84 @@ files can be run.
 
 ## Running the project
 
-### runAll.ipynb
+The project is organized in different folders containing related source code
+files and notebooks together.
 
-This file contains six cells which demonstrates some of the approaches we have
-explored in attempting to convert TensorFlow models to ONNX. The first two save
-the model as a HDF5 model (Keras file format) and loads the same model to test
-that it works, respectively. Previous versions of `export-to-onnx.py` attempted
-to use [model\_converters](https://github.com/triagemd/model-converters) and
-[onnx-tf](https://github.com/onnx/onnx-tensorflow) to convert this to ONNX, but
-these efforts did not pan out.
+### save-and-load-tensorflow-keras
 
-The remaining four cells attempt to train a model using the low-level TensorFlow
-API, convert this to a protobuf format, and then convert this format using
-onnx-tf to ONNX format, and lastly to load the saved model into Microsoft CNTK,
-which supports integrated ONNX support.
+This illustrates a simple example of training a model using Keras in Tensorflow,
+saving the model in a HDF5 file, and reloading the saved model in a different
+file to perform a prediction.
 
-### run.ipynb and run2.ipynb
+Note how the training phase can be skipped when loading the pre-trained model,
+greatly shortening the execution time.
 
-These represent old entry points to the scripts we've written.
+
+### try-export-tensorflow-to-onnx
+
+This represents a largely unfruitful attempt at converting Tensorflow's model
+format into ONNX format and loading it into a compatible framework. In part, the
+lack of success sstems from difficulties with getting the other frameworks to
+work properly; in part, it's due to the frameworks not playing nicely with each
+other. We've found model conversion attempts cumbersome and non-robust at best,
+and would advise against basing any machine learning system on the
+cross-compatibility of different formats, as the support of such
+cross-compatibility currently seems low.
+
+### stillinger-nav
+
+This represents one of two separate attempts at working with open data available
+at data.norge.no, particularly data about job advertisements. The two different
+notebooks contain two different approaches to training a model to categorize the
+job advertisements based on labeled training data: one uses Sklearn, while the
+other uses FastText.
+
+The model works by leveraging the tendency of different kinds of documents to
+use specific language. Words which are common in one category but not in the
+others are characteristic for documents in that category, and documents
+containing those wordsare lmore likely to be predicted to belong to sai
+category. Over time, with lots of data samples, the model learns what sorts of
+words belong to which category.
+
+We experienced a fair degree of success with  this algorithm. Furthermore, it's
+a simple but broadly applicable learning model which would be able to work on
+many different datasets in order to group them into different categories.
+
+### job-ads-unlabeled-topic-modeling
+
+This notebook contains the other attempt at working with the job ad data from
+data.norge.no. In particular, it treats the job description text as unlabeled
+data and attempts to extract topics from the model.
+
+The algorithm uses a form of topic modeling with
+[latent Dirichlet allocation (LDA)](https://en.wikipedia.org/wiki/Latent_Dirichlet_allocation)
+in order to construct a predictive model, again leveraging the fact that
+different topics tend to use different words to describe their content. We
+constructed two different models: one based on just a regular bag of words
+across all documents, and one based on TF-IDF over that bag of words. The
+algorithm was told to generate 10 topics - this number was an arbitrary decision
+by the programmer.
+
+We received some interesting results. Among the topics determined by the
+algorithm, some could easily be classified as belonging to a specific job
+category, and three team members independently assigned them the same labels.
+This included jobs related to children, jobs related to health, customer service
+jobs, leadership positions and educational jobs. Some other categories seemed to
+be about information provided or sought in the ad itself - such as contact
+information, information about who provided the ad, as well as information
+sought about potential applicants. Interestingly, the models also determined
+that English and, in the case of the bag of words model, nynorsk, were topics in
+their own right.
+
+There are some obvious limitations to this algorithm. For one, it's not able to
+automatically label the topic, and it's not alway  obvious what a topic
+concerns at a glance. Second, the fact that the number of topics to search for
+is determined by the programmer means that in order to have a meaningful set of
+topics, a good guess for the number of topics in the documents is required. It
+could be interesting to try and connect this model to a topic map - for instance
+[Los](https://www.difi.no/fagomrader-og-tjenester/digitalisering-og-samordning/nasjonal-arkitektur/los),
+in order to see if we could automatically label the topics based on which words
+are important.
 
 ### New notebooks
 
@@ -47,6 +107,11 @@ New notebooks can be created and either run existing Python code (using the
 `%run ...` command) in the `src/` folder, or may contain code directly.
 
 ## Findings
+
+**NOTE:** This section is largely focused on the interoperability of the
+different deep learning frameworks and models. Our results within text document
+classification are better described elsewhere - see comments in the notebooks
+and descriptions in the report on this project.
 
 ### Training, saving and loading models with TensorFlow
 
