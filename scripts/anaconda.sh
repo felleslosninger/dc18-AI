@@ -20,7 +20,7 @@ echo -n "Upgrading pip... "
 docker exec -ti "$IMGHASH" /bin/bash -c "pip install -U pip > /dev/null"
 echo "done"
 echo "Installing additional modules:"
-for module in "onnx" "tensorflow" "model_converters" "onnx-tf" "cntk"
+for module in "onnx" "tensorflow" "model_converters" "onnx-tf" "cntk" "html" "wget" "gensim" "nltk"
 do
     echo -n "$module... "
     docker exec -ti "$IMGHASH" /bin/bash -c "pip install -U $module > /dev/null"
