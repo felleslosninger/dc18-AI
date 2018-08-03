@@ -13,12 +13,14 @@ def load_datasets(data_dir=os.path.join('.', 'data'), start_year=2017, end_year=
 
         df_ads = pd.read_csv(
             os.path.join(data_dir, job_ads_filename),
-            sep=';'
+            sep=';',
+            encoding='utf-8'
         )
 
         df_ads_desc = pd.read_csv(
             os.path.join(data_dir, job_ads_desc_filename),
-            sep=';'
+            sep=';',
+            encoding='utf-8'
         )
 
         # Merge datasets into one
